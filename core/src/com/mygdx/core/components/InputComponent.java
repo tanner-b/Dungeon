@@ -1,10 +1,10 @@
 package com.mygdx.core.components;
 
-import com.mygdx.core.GameObject;
+import com.mygdx.core.Creature;
 
-public class InputComponent {
+abstract public class InputComponent {
 
-    public void update(GameObject object){
+    public void update(Creature creaturet){
 
     }
 
