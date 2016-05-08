@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.core.Creature;
 import com.mygdx.core.GameObject;
 import com.mygdx.core.components.GraphicsComponent;
+import com.mygdx.core.components.PhysicsComponent;
 import com.mygdx.core.components.PlayerInputComponent;
 
 public class Game extends ApplicationAdapter {
@@ -25,6 +26,7 @@ public class Game extends ApplicationAdapter {
         creature = new Creature();
         creature.setGraphicsComponent(new GraphicsComponent());
         creature.setInputComponent(new PlayerInputComponent());
+		creature.setPhysicsComponent(new PhysicsComponent());
         creature.set(new Sprite(img));
         creature.scale(5);
         creature.setOriginCenter();
@@ -37,8 +39,7 @@ public class Game extends ApplicationAdapter {
 		Gdx.gl.glClearColor(0.5f, 0.5f, 0.5f, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         creature.update(Gdx.graphics.getDeltaTime());
-        creature.setX(creature.getX() + creature.getSpeedX());
-        creature.setY(creature.getY() + creature.getSpeedY());
+
 		batch.begin();
         creature.draw(batch);
 		batch.end();

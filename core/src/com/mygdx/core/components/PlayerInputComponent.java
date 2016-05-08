@@ -33,13 +33,13 @@ public class PlayerInputComponent extends InputComponent {
             DownPressed = true;
 
         if (LeftPressed)
-            creature.setSpeedX(-10);
+            creature.setSpeedX(creature.getSpeedX() - 100);
         if (RightPressed)
-            creature.setSpeedX(10);
+            creature.setSpeedX(creature.getSpeedX() + 100);
         if  (UpPressed)
-            creature.setSpeedY(+10);
+            creature.setSpeedY(creature.getSpeedY() + 100);
         if (DownPressed)
-            creature.setSpeedY(-10);
+            creature.setSpeedY(creature.getSpeedY() - 100);
     }
 
     private void updateMouse(Creature creature) {

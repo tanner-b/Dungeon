@@ -4,8 +4,11 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.core.components.GraphicsComponent;
 
+import java.util.List;
+
 public class GameObject extends Sprite {
     protected GraphicsComponent graphics;
+    public List<GameObject> children;
 
     public void setGraphicsComponent(GraphicsComponent graphics) {
         this.graphics = graphics;
